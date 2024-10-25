@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity"
+    android:id="@+id/mContainer"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/layout_top_btn"
+        android:background="@drawable/gredient_bg"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/back_btn"
+            android:background="#00FFFFFF"
+            android:src="@drawable/baseline_chevron"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Now playing"
+            android:textColor="#FFFFFF"
+            android:layout_toStartOf="@+id/menu_btn"
+            android:layout_toEndOf="@+id/back_btn"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/menu_btn"
+            android:layout_width="30dp"
+            android:background="@android:color/transparent"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_menu"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            >
+        </ImageView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/card"
+        android:layout_below="@+id/layout_top_btn">
+
+        <ImageView
+            android:id="@+id/cover_art"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/wallpaperflare">
+        </ImageView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="32dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:src="@color/white"
+        android:text="This is song name"
+        android:textSize="22sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/song_name"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:src="@color/white"
+        android:text="This is song Artist"
+        android:textSize="18sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_for_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="54dp"
+        android:background="@drawable/gredient_bg">
+
+        <ImageView
+            android:id="@+id/id_shuffle"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/baseline_shuffle">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/id_prev"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@+id/play_pause"
+            android:src="@drawable/baseline_skip_previous">
+        </ImageView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/baseline_play_arrow">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <ImageView
+            android:id="@+id/id_next"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/play_pause"
+            android:src="@drawable/baseline_skip_next">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/id_repeat"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/baseline_repeat">
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@id/relative_layout_for_bottom"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/seek_bar_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1:20"
+            android:id="@+id/durationPlayed"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentStart="true"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4:28"
+            android:id="@+id/durationTotal"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentEnd="true"
+            >
+        </TextView>
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentBottom="true">
+        </SeekBar>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

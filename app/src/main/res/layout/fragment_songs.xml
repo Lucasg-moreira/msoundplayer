@@ -3,12 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SongsFragment">
+    tools:context=".SongsFragment"
+
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"
+        android:background="@drawable/gredient_bg_2"
+
         >
 
     </androidx.recyclerview.widget.RecyclerView>

@@ -46,6 +46,9 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
             if (image != null) {
                 Glide.with(mContext).asBitmap().load(image).into(holder.album_art);
             }
+            else {
+                Glide.with(mContext).load(R.drawable.ic_launcher_foreground).into(holder.album_art);
+            }
 
             holder.itemView.setOnClickListener(view -> {
                 Intent intent = new Intent(mContext, PlayerActivity.class);

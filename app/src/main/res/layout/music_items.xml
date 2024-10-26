@@ -5,12 +5,13 @@
     android:id="@+id/audio_item"
     android:background="@drawable/gredient_bg_2">
 
+
     <ImageView
+        android:id="@+id/music_img"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:id="@+id/music_img"
         android:background="@drawable/ic_launcher_background"
-        android:padding="5dp">
+        android:scaleType="fitXY">
     </ImageView>
 
     <TextView

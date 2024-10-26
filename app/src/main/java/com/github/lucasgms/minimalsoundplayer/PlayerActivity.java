@@ -48,10 +48,6 @@ public class PlayerActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_player);
 
-        if (song_name != null && listSongs.get(position).getTitle() == song_name.getText()) {
-            return;
-        }
-
         initViews();
         getIntentMethod();
 
